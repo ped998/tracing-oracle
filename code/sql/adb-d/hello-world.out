@@ -1,0 +1,176 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Feb 24 07:05:51 2023
+Version 21.9.0.0.0
+
+Copyright (c) 1982, 2022, Oracle.  All rights reserved.
+
+Enter password: 
+Last Successful login time: Fri Feb 24 2023 07:03:55 -05:00
+
+Connected to:
+Oracle Database 19c EE Extreme Perf Release 19.0.0.0.0 - Production
+Version 19.18.0.1.0
+
+SQL> BEGIN dbms_session.session_trace_enable; END;
+
+*
+ERROR at line 1:
+ORA-01031: insufficient privileges
+ORA-06512: at "SYS.DBMS_SESSION", line 343
+ORA-06512: at line 1
+
+
+SQL> ERROR:
+ORA-01031: insufficient privileges
+
+
+
+Session altered.
+
+
+PL/SQL procedure successfully completed.
+
+
+'HELLO,WORLD
+------------
+hello, world
+
+
+PL/SQL procedure successfully completed.
+
+
+TRACE DIRECTORY
+--------------------------------------------------------------------------------
+/u02/app/oracle/diag/rdbms/xxxxxxxx_xxxxxx/xxxxxxxxx/trace
+
+
+TRACE FILE
+--------------------------------------------------------------------------------
+/u02/app/oracle/diag/rdbms/xxxxxxxx_xxxxxx/xxxxxxxxx/trace/xxxxxxxxx_ora_68057.t
+rc
+
+
+
+TRACE
+--------------------------------------------------------------------------------
+Trace file /u02/app/oracle/diag/rdbms/xxxxxxxx_xxxxxx/xxxxxxxxx/trace/xxxxxxxxx_
+ora_68057.trc
+
+Oracle Database 19c EE Extreme Perf Release 19.0.0.0.0 - Production
+Version 19.18.0.1.0
+Build label:	RDBMS_19.18.0.1.0ADBDRU_LINUX.X64_230120
+ORACLE_HOME:	/u02/app/oracle/product/19.0.0.0/dbhome_2
+System name:	Linux
+Node name:	host-xxxxxx
+Release:	4.14.35-2047.516.2.4.el7uek.x86_64
+Version:	#2 SMP Fri Sep 23 09:48:48 PDT 2022
+
+TRACE
+--------------------------------------------------------------------------------
+Machine:	x86_64
+Storage:	Exadata
+Instance name: xxxxxxxxx
+Redo thread mounted by this instance: 1
+Oracle process number: 120
+Unix process pid: 68057, image: oracle@host-xxxxxx
+
+
+*** 2023-02-24T07:06:27.590233-05:00 (PETE(3))
+
+*** SESSION ID:(27.13233) 2023-02-24T07:06:27.590262-05:00
+
+TRACE
+--------------------------------------------------------------------------------
+*** CLIENT ID:() 2023-02-24T07:06:27.590271-05:00
+*** SERVICE NAME:(PETE_low.atp.oraclecloud.com) 2023-02-24T07:06:27.590278-05:00
+*** MODULE NAME:(SQL*Plus) 2023-02-24T07:06:27.590284-05:00
+*** ACTION NAME:() 2023-02-24T07:06:27.590290-05:00
+*** CLIENT DRIVER:(SQL*PLUS) 2023-02-24T07:06:27.590295-05:00
+*** CONTAINER ID:(3) 2023-02-24T07:06:27.590301-05:00
+*** CLIENT IP:(10.148.65.24) 2023-02-24T07:06:27.590313-05:00
+
+=====================
+PARSING IN CURSOR #140646282795320 len=46 dep=0 uid=104 oct=47 lid=104 tim=56425
+2606773 hv=3664479699 ad='66cde5e00' sqlid='2yxfq0vd6r1fm'
+
+TRACE
+--------------------------------------------------------------------------------
+
+BEGIN dbms_monitor.session_trace_enable; END;
+END OF STMT
+EXEC #140646282795320:c=689,e=688,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=0,tim=5
+64252606771
+
+WAIT #140646282795320: nam='SQL*Net message to client' ela= 2 driver id=14136975
+36 #bytes=1 p3=0 obj#=-1 tim=564252607377
+
+WAIT #140646282795320: nam='SQL*Net message from client' ela= 16668 driver id=14
+13697536 #bytes=1 p3=0 obj#=-1 tim=564252624058
+
+TRACE
+--------------------------------------------------------------------------------
+
+CLOSE #140646282795320:c=7,e=7,dep=0,type=1,tim=564252624098
+=====================
+PARSING IN CURSOR #140646282793544 len=31 dep=0 uid=104 oct=3 lid=104 tim=564252
+624141 hv=3942071437 ad='65a5b2800' sqlid='dyh0rugpgfg4d'
+
+select 'hello, world' from dual
+END OF STMT
+PARSE #140646282793544:c=28,e=28,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=13887349
+53,tim=564252624140
+
+
+TRACE
+--------------------------------------------------------------------------------
+EXEC #140646282793544:c=21,e=21,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=138873495
+3,tim=564252624191
+
+WAIT #140646282793544: nam='SQL*Net message to client' ela= 1 driver id=14136975
+36 #bytes=1 p3=0 obj#=-1 tim=564252624211
+
+FETCH #140646282793544:c=8,e=7,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=1388734953
+,tim=564252624233
+
+STAT #140646282793544 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=
+0 str=1 time=1 us cost=2 size=0 card=1)'
+
+TRACE
+--------------------------------------------------------------------------------
+
+WAIT #140646282793544: nam='SQL*Net message from client' ela= 16179 driver id=14
+13697536 #bytes=1 p3=0 obj#=-1 tim=564252640469
+
+FETCH #140646282793544:c=1,e=1,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=1388734953
+,tim=564252640509
+
+WAIT #140646282793544: nam='SQL*Net message to client' ela= 2 driver id=14136975
+36 #bytes=1 p3=0 obj#=-1 tim=564252640526
+
+WAIT #140646282793544: nam='SQL*Net message from client' ela= 16437 driver id=14
+
+TRACE
+--------------------------------------------------------------------------------
+13697536 #bytes=1 p3=0 obj#=-1 tim=564252656975
+
+CLOSE #140646282793544:c=4,e=4,dep=0,type=1,tim=564252657048
+=====================
+PARSING IN CURSOR #140646281160096 len=47 dep=0 uid=104 oct=47 lid=104 tim=56425
+2657101 hv=2363491789 ad='65a0c6ef0' sqlid='6fu71su6f01fd'
+
+BEGIN dbms_monitor.session_trace_disable; END;
+END OF STMT
+PARSE #140646281160096:c=35,e=35,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=0,tim=56
+4252657100
+
+TRACE
+--------------------------------------------------------------------------------
+
+EXEC #140646281160096:c=249,e=249,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=0,tim=5
+64252657377
+
+
+54 rows selected.
+
+SQL> Disconnected from Oracle Database 19c EE Extreme Perf Release 19.0.0.0.0 - Production
+Version 19.18.0.1.0
